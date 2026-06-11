@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ashritha Duppati — Resume | AI & Data Science Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    /* ── Reset ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    /* ── Screen wrapper + print button ── */
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: #f0f2f5;
+      color: #1a1a1a;
+      font-size: 13.5px;
+      line-height: 1.55;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .screen-bar {
+      background: #1a1a2e;
+      padding: 12px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .screen-bar-title {
+      color: #fff;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .screen-bar-title span { color: #00d4ff; }
+
+    .btn-print {
+      padding: 8px 20px;
+      background: linear-gradient(135deg, #00d4ff, #7c3aed);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: opacity 0.2s;
+    }
+    .btn-print:hover { opacity: 0.88; }
+
+    .btn-tip {
+      color: #a0a0b0;
+      font-size: 0.78rem;
+    }
+
+    /* ── Page ── */
+    .page-wrapper {
+      display: flex;
+      justify-content: center;
+      padding: 32px 16px 64px;
+    }
+
+    .resume {
+      width: 210mm;
+      min-height: 297mm;
+      background: #fff;
+      box-shadow: 0 4px 40px rgba(0,0,0,0.12);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    /* ── Header ── */
+    .resume-header {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 60%, #0f172a 100%);
+      padding: 32px 36px 28px;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .resume-header::before {
+      content: '';
+      position: absolute;
+      top: -60px; right: -60px;
+      width: 220px; height: 220px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(0,212,255,0.12) 0%, transparent 70%);
+    }
+
+    .resume-header::after {
+      content: '';
+      position: absolute;
+      bottom: -40px; left: -40px;
+      width: 160px; height: 160px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(124,58,237,0.1) 0%, transparent 70%);
+    }
+
+    .header-name {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+      margin-bottom: 4px;
+    }
+
+    .header-title {
+      font-size: 13px;
+      font-weight: 500;
+      color: #00d4ff;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .header-contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 20px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 12.5px;
+      color: #cbd5e1;
+    }
+
+    .contact-item .icon { color: #00d4ff; font-size: 11px; }
+
+    .contact-item a { color: #cbd5e1; text-decoration: none; }
+    .contact-item a:hover { color: #00d4ff; }
+
+    /* ── Layout ── */
+    .resume-body {
+      display: grid;
+      grid-template-columns: 1fr 2.5fr;
+    }
+
+    .col-left {
+      background: #f8fafc;
+      padding: 26px 20px;
+      border-right: 1px solid #e8ecf0;
+    }
+
+    .col-right {
+      padding: 26px 28px;
+    }
+
+    /* ── Section titles ── */
+    .section { margin-bottom: 22px; }
+
+    .section-title {
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #0f172a;
+      padding-bottom: 5px;
+      border-bottom: 2px solid #00d4ff;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .section-title .dot {
+      width: 6px; height: 6px; border-radius: 50%;
+      background: linear-gradient(135deg, #00d4ff, #7c3aed);
+      flex-shrink: 0;
+    }
+
+    /* ── Skills ── */
+    .skill-group { margin-bottom: 12px; }
+
+    .skill-group-label {
+      font-size: 10.5px;
+      font-weight: 600;
+      color: #475569;
+      margin-bottom: 5px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+    }
+
+    .skill-tag {
+      padding: 2px 7px;
+      background: #e8f4ff;
+      color: #1e40af;
+      border-radius: 4px;
+      font-size: 11px;
+      font-weight: 500;
+      border: 1px solid #bfdbfe;
+    }
+
+    .skill-tag.ai   { background: #f0fdf4; color: #166534; border-color: #bbf7d0; }
+    .skill-tag.cloud { background: #fff7ed; color: #9a3412; border-color: #fed7aa; }
+    .skill-tag.db   { background: #fdf4ff; color: #7e22ce; border-color: #e9d5ff; }
+    .skill-tag.tool { background: #f1f5f9; color: #475569; border-color: #cbd5e1; }
+
+    /* ── Education ── */
+    .edu-item { margin-bottom: 12px; }
+
+    .edu-degree {
+      font-size: 12px;
+      font-weight: 600;
+      color: #1e293b;
+      line-height: 1.4;
+    }
+
+    .edu-school {
+      font-size: 11.5px;
+      color: #374151;
+      font-weight: 500;
+      margin-top: 1px;
+    }
+
+    .edu-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 2px;
+    }
+
+    .edu-date { font-size: 10.5px; color: #6b7280; }
+
+    .edu-grade {
+      font-size: 10.5px;
+      font-weight: 700;
+      color: #00b09b;
+      background: #f0fdf4;
+      padding: 1px 6px;
+      border-radius: 4px;
+      border: 1px solid #bbf7d0;
+    }
+
+    /* ── Certifications ── */
+    .cert-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 6px;
+      margin-bottom: 8px;
+    }
+
+    .cert-bullet {
+      width: 16px; height: 16px;
+      background: linear-gradient(135deg, #00d4ff, #7c3aed);
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .cert-bullet::after {
+      content: '✓';
+      color: #fff;
+      font-size: 9px;
+      font-weight: 700;
+    }
+
+    .cert-text { font-size: 11.5px; color: #374151; line-height: 1.45; }
+    .cert-org  { font-size: 10px; color: #6b7280; display: block; }
+
+    /* ── Achievements ── */
+    .achieve-item {
+      display: flex;
+      gap: 6px;
+      margin-bottom: 6px;
+      font-size: 11.5px;
+      color: #374151;
+      line-height: 1.45;
+    }
+
+    .achieve-item::before {
+      content: '▸';
+      color: #7c3aed;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    /* ── Summary ── */
+    .summary-text {
+      font-size: 12.5px;
+      color: #374151;
+      line-height: 1.65;
+    }
+
+    .summary-text strong { color: #1e293b; }
+
+    /* ── Experience ── */
+    .exp-item { margin-bottom: 18px; }
+
+    .exp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 2px;
+      gap: 8px;
+    }
+
+    .exp-role {
+      font-size: 13px;
+      font-weight: 700;
+      color: #1e293b;
+    }
+
+    .exp-date {
+      font-size: 11px;
+      color: #6b7280;
+      white-space: nowrap;
+      background: #f1f5f9;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-weight: 500;
+    }
+
+    .exp-company {
+      font-size: 12px;
+      color: #0891b2;
+      font-weight: 600;
+      margin-bottom: 7px;
+    }
+
+    .exp-bullets { list-style: none; }
+
+    .exp-bullets li {
+      font-size: 12px;
+      color: #374151;
+      padding: 3px 0 3px 14px;
+      position: relative;
+      line-height: 1.55;
+    }
+
+    .exp-bullets li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 10px;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #00d4ff, #7c3aed);
+    }
+
+    .exp-bullets li strong { color: #1e293b; }
+
+    .exp-tech-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+      margin-top: 8px;
+    }
+
+    .exp-tag {
+      padding: 1px 6px;
+      background: #eff6ff;
+      color: #1d4ed8;
+      border-radius: 3px;
+      font-size: 10.5px;
+      font-weight: 500;
+      border: 1px solid #bfdbfe;
+    }
+
+    /* ── Projects ── */
+    .project-item { margin-bottom: 18px; }
+
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 8px;
+      margin-bottom: 4px;
+    }
+
+    .project-title {
+      font-size: 12.5px;
+      font-weight: 700;
+      color: #1e293b;
+      line-height: 1.4;
+    }
+
+    .project-outcome {
+      font-size: 10.5px;
+      font-weight: 600;
+      color: #059669;
+      background: #ecfdf5;
+      padding: 2px 8px;
+      border-radius: 4px;
+      border: 1px solid #a7f3d0;
+      white-space: nowrap;
+    }
+
+    .project-bullets { list-style: none; }
+
+    .project-bullets li {
+      font-size: 11.5px;
+      color: #374151;
+      padding: 2px 0 2px 13px;
+      position: relative;
+      line-height: 1.55;
+    }
+
+    .project-bullets li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      top: 2px;
+      color: #7c3aed;
+      font-size: 11px;
+    }
+
+    .project-bullets li strong { color: #1e293b; }
+
+    .project-tech-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 3px;
+      margin-top: 6px;
+    }
+
+    .proj-tag {
+      padding: 1px 6px;
+      background: #f5f3ff;
+      color: #5b21b6;
+      border-radius: 3px;
+      font-size: 10px;
+      font-weight: 500;
+      border: 1px solid #ddd6fe;
+    }
+
+    /* ── Print styles ── */
+    @media print {
+      .screen-bar, .btn-print { display: none !important; }
+      body { background: #fff; font-size: 12.5px; }
+      .page-wrapper { padding: 0; }
+      .resume { box-shadow: none; border-radius: 0; width: 100%; min-height: auto; }
+      .resume-header { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+      .cert-bullet, .exp-bullets li::before, .project-bullets li::before { print-color-adjust: exact; }
+
+      @page {
+        size: A4;
+        margin: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Screen Control Bar -->
+<div class="screen-bar">
+  <div class="screen-bar-title">
+    Ashritha Duppati — <span>ATS-Optimized Resume</span>
+  </div>
+  <div style="display:flex;align-items:center;gap:16px">
+    <span class="btn-tip">Ctrl+P or click to print / save as PDF</span>
+    <button class="btn-print" onclick="window.print()">
+      ⬇ Download PDF
+    </button>
+  </div>
+</div>
+
+<div class="page-wrapper">
+
+  <!-- ═══ RESUME ═══ -->
+  <div class="resume">
+
+    <!-- Header -->
+    <div class="resume-header">
+      <div class="header-name">Ashritha Duppati</div>
+      <div class="header-title">AI & Data Science Engineer &nbsp;|&nbsp; Full Stack Developer &nbsp;|&nbsp; ML Engineer</div>
+      <div class="header-contact">
+        <div class="contact-item">
+          <span class="icon">📞</span>
+          +91 8523035920
+        </div>
+        <div class="contact-item">
+          <span class="icon">✉</span>
+          <a href="mailto:ashrithaduppati2@gmail.com">ashrithaduppati2@gmail.com</a>
+        </div>
+        <div class="contact-item">
+          <span class="icon">🔗</span>
+          <a href="https://linkedin.com" target="_blank">linkedin.com/in/ashritha-duppati</a>
+        </div>
+        <div class="contact-item">
+          <span class="icon">💻</span>
+          <a href="https://github.com" target="_blank">github.com/ashritha-duppati</a>
+        </div>
+        <div class="contact-item">
+          <span class="icon">📍</span>
+          Hyderabad, India
+        </div>
+      </div>
+    </div>
+
+    <!-- Body -->
+    <div class="resume-body">
+
+      <!-- Left Column -->
+      <div class="col-left">
+
+        <!-- Education -->
+        <div class="section">
+          <div class="section-title"><span class="dot"></span> Education</div>
+
+          <div class="edu-item">
+            <div class="edu-degree">M.Tech — Data Science</div>
+            <div class="edu-school">BVRIT Hyderabad College of Engineering for Women</div>
+            <div class="edu-meta">
+              <span class="edu-date">Oct 2024 – Oct 2026</span>
+            </div>
+          </div>
+
+          <div class="edu-item">
+            <div class="edu-degree">B.Tech — Computer Science &amp; Engineering</div>
+            <div class="edu-school">Anu Bose Institute of Technology</div>
+            <div class="edu-meta">
+              <span class="edu-date">Jun 2020 – Jul 2024</span>
+              <span class="edu-grade">7.95 GPA</span>
+            </div>
+          </div>
+
+          <div class="edu-item">
+            <div class="edu-degree">Intermediate — MPC</div>
+            <div class="edu-school">TS Model School</div>
+            <div class="edu-meta">
+              <span class="edu-date">Jun 2018 – May 2020</span>
+              <span class="edu-grade">95%</span>
+            </div>
+          </div>
+
+          <div class="edu-item">
+            <div class="edu-degree">Secondary Education (SSC)</div>
+            <div class="edu-school">ZPHS School</div>
+            <div class="edu-meta">
+              <span class="edu-date">May 2018</span>
+              <span class="edu-grade">87%</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Technical Skills -->
+        <div class="section">
+          <div class="section-title"><span class="dot"></span> Technical Skills</div>
+
+          <div class="skill-group">
+            <div class="skill-group-label">Programming Languages</div>
+            <div class="skill-tags">
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">Java</span>
+              <span class="skill-tag">SQL</span>
+              <span class="skill-tag">JavaScript</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <div class="skill-group-label">AI / Machine Learning</div>
+            <div class="skill-tags">
+              <span class="skill-tag ai">Machine Learning</span>
+              <span class="skill-tag ai">Data Preprocessing</span>
+              <span class="skill-tag ai">Feature Engineering</span>
+              <span class="skill-tag ai">Model Evaluation</span>
+              <span class="skill-tag ai">Scikit-learn</span>
+              <span class="skill-tag ai">Pandas</span>
+              <span class="skill-tag ai">NumPy</span>
+              <span class="skill-tag ai">Generative AI</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <div class="skill-group-label">Frontend Development</div>
+            <div class="skill-tags">
+              <span class="skill-tag">React.js</span>
+              <span class="skill-tag">HTML5</span>
+              <span class="skill-tag">CSS3</span>
+              <span class="skill-tag">Bootstrap</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <div class="skill-group-label">Database Technologies</div>
+            <div class="skill-tags">
+              <span class="skill-tag db">MySQL</span>
+              <span class="skill-tag db">SQL Querying</span>
+              <span class="skill-tag db">Data Modeling</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <div class="skill-group-label">Data Analytics & Visualization</div>
+            <div class="skill-tags">
+              <span class="skill-tag ai">Power BI</span>
+              <span class="skill-tag ai">Data Analysis</span>
+              <span class="skill-tag ai">Statistical Analysis</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <div class="skill-group-label">Cloud & DevOps Tools</div>
+            <div class="skill-tags">
+              <span class="skill-tag cloud">AWS</span>
+              <span class="skill-tag cloud">Azure</span>
+              <span class="skill-tag cloud">Git</span>
+              <span class="skill-tag cloud">GitHub</span>
+              <span class="skill-tag tool">VS Code</span>
+              <span class="skill-tag tool">MS Office</span>
+              <span class="skill-tag tool">Linux</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Certifications -->
+        <div class="section">
+          <div class="section-title"><span class="dot"></span> Certifications</div>
+
+          <div class="cert-item">
+            <div class="cert-bullet"></div>
+            <div>
+              <div class="cert-text">AWS Cloud Computing Workshop</div>
+              <span class="cert-org">Amazon Web Services</span>
+            </div>
+          </div>
+
+          <div class="cert-item">
+            <div class="cert-bullet"></div>
+            <div>
+              <div class="cert-text">Data Analytics &amp; Forensic Technology — Job Simulation</div>
+              <span class="cert-org">Deloitte</span>
+            </div>
+          </div>
+
+          <div class="cert-item">
+            <div class="cert-bullet"></div>
+            <div>
+              <div class="cert-text">AI-Powered Data Analytics &amp; Strategy Development</div>
+              <span class="cert-org">Tata iQ — Financial Services</span>
+            </div>
+          </div>
+
+          <div class="cert-item">
+            <div class="cert-bullet"></div>
+            <div>
+              <div class="cert-text">Responsive Web Design Certification</div>
+              <span class="cert-org">freeCodeCamp</span>
+            </div>
+          </div>
+
+          <div class="cert-item">
+            <div class="cert-bullet"></div>
+            <div>
+              <div class="cert-text">Full Stack Web Development Bootcamp</div>
+              <span class="cert-org">Online Certification</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Achievements -->
+        <div class="section">
+          <div class="section-title"><span class="dot"></span> Achievements</div>
+
+          <div class="achieve-item">Participated in <strong>AWS Cloud Computing Workshop</strong>, gaining hands-on experience with cloud services and architecture</div>
+          <div class="achieve-item">Completed <strong>Deloitte Job Simulation</strong> in data analysis and forensic technology with distinction</div>
+          <div class="achieve-item">Completed <strong>Tata iQ Job Simulation</strong> involving AI-powered data analytics and financial strategy development</div>
+          <div class="achieve-item">Secured <strong>95% in Intermediate (MPC)</strong> — among top performers at TS Model School</div>
+        </div>
+
+      </div><!-- /col-left -->
+
+      <!-- Right Column -->
+      <div class="col-right">
+
+        <!-- Summary -->
+        <div class="section">
+          <div class="section-title"><span class="dot"></span> Professional Summary</div>
+          <p class="summary-text">
+            Motivated <strong>M.Tech Data Science</strong> student with hands-on software engineering experience and a strong foundation in <strong>Python, Java, SQL, Machine Learning,</strong> and <strong>full-stack web development</strong>. Demonstrated ability to build end-to-end ML solutions for real-world cybersecurity challenges, leveraging data preprocessing, feature engineering, and predictive modeling. Experienced with cloud platforms (<strong>AWS, Azure</strong>), relational databases, and frontend frameworks including <strong>React.js</strong>. Adept at translating complex datasets into actionable insights through <strong>data analytics and visualization</strong>. Seeking to apply technical skills and academic excellence in roles spanning <strong>AI Engineering, Data Science, Data Analytics,</strong> and <strong>Full Stack Development</strong>.
+          </p>
+        </div>
+
+        <!-- Experience -->
+        <div class="section">
+          <div class="section-title"><span class="dot"></span> Experience</div>
+
+          <div class="exp-item">
+            <div class="exp-header">
+              <div class="exp-role">Software Engineer Intern</div>
+              <div class="exp-date">Sep 2025 – Feb 2026</div>
+            </div>
+            <div class="exp-company">Schrander Solutions &nbsp;·&nbsp; Hyderabad, India</div>
+            <ul class="exp-bullets">
+              <li>
+                <strong>Developed and optimized Python and SQL scripts</strong> for backend data processing pipelines, improving data transformation and loading efficiency for production workflows.
+              </li>
+              <li>
+                <strong>Designed and executed complex SQL queries</strong> to manage, query, and analyze relational databases, enabling faster data retrieval and supporting data-driven decision-making.
+              </li>
+              <li>
+                <strong>Assisted in end-to-end data lifecycle management</strong> including ingestion, preprocessing, transformation, and structured storage for application development use cases.
+              </li>
+              <li>
+                <strong>Collaborated with cross-functional development teams</strong> to systematically identify, debug, and resolve application performance bottlenecks, improving system stability.
+              </li>
+              <li>
+                <strong>Contributed to backend service development</strong>, deepening understanding of RESTful architecture, server-side logic, and scalable application design patterns.
+              </li>
+            </ul>
+            <div class="exp-tech-bar">
+              <span class="exp-tag">Python</span>
+              <span class="exp-tag">SQL</span>
+              <span class="exp-tag">MySQL</span>
+              <span class="exp-tag">Backend Development</span>
+              <span class="exp-tag">Data Processing</span>
+              <span class="exp-tag">REST APIs</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projects -->
+        <div class="section">
+          <div class="section-title"><span class="dot"></span> Projects</div>
+
+          <!-- Project 1 -->
+          <div class="project-item">
+            <div class="project-header">
+              <div class="project-title">Phishing Website Detection Using Machine Learning</div>
+              <div class="project-outcome">94%+ Accuracy</div>
+            </div>
+            <ul class="project-bullets">
+              <li>
+                <strong>Problem:</strong> Online phishing attacks posed significant financial and security risks, requiring an automated and scalable detection system beyond traditional rule-based approaches.
+              </li>
+              <li>
+                <strong>Action:</strong> Implemented and benchmarked multiple ML classification algorithms (Random Forest, SVM, Decision Tree) on a dataset of URL features, behavioral patterns, and page characteristics.
+              </li>
+              <li>
+                <strong>Engineered features</strong> from raw URL strings and HTML metadata using Python (Pandas, NumPy, Scikit-learn), applying data preprocessing, normalization, and cross-validation techniques.
+              </li>
+              <li>
+                <strong>Outcome:</strong> Achieved high classification accuracy, reducing false positive rates and delivering a robust cybersecurity defense validated through model evaluation metrics (precision, recall, F1-score).
+              </li>
+              <li>
+                Visualized feature importance and model performance using <strong>Power BI dashboards</strong> for stakeholder reporting.
+              </li>
+            </ul>
+            <div class="project-tech-bar">
+              <span class="proj-tag">Python</span>
+              <span class="proj-tag">Scikit-learn</span>
+              <span class="proj-tag">Pandas</span>
+              <span class="proj-tag">NumPy</span>
+              <span class="proj-tag">MySQL</span>
+              <span class="proj-tag">Power BI</span>
+              <span class="proj-tag">Machine Learning</span>
+              <span class="proj-tag">Feature Engineering</span>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="project-item">
+            <div class="project-header">
+              <div class="project-title">Route Hijacking Attack Detection in Opportunistic Mobile Networks (OMNs)</div>
+              <div class="project-outcome">Research Project</div>
+            </div>
+            <ul class="project-bullets">
+              <li>
+                <strong>Problem:</strong> Opportunistic Mobile Networks are vulnerable to route hijacking by malicious nodes, compromising data integrity in delay-tolerant communication environments.
+              </li>
+              <li>
+                <strong>Action:</strong> Conducted systematic research into OMN routing protocols, analyzed malicious node behavior patterns, and designed algorithmic detection mechanisms for identifying compromised routing paths.
+              </li>
+              <li>
+                <strong>Developed detection algorithms</strong> in Java to monitor routing tables, flag anomalous forwarding behavior, and maintain packet delivery integrity in sparse-connectivity environments.
+              </li>
+              <li>
+                <strong>Outcome:</strong> Proposed a detection framework capable of identifying hijacked routes with reduced overhead, contributing to improved security for IoT and mobile edge computing scenarios.
+              </li>
+            </ul>
+            <div class="project-tech-bar">
+              <span class="proj-tag">Java</span>
+              <span class="proj-tag">Network Security</span>
+              <span class="proj-tag">Algorithm Design</span>
+              <span class="proj-tag">MySQL</span>
+              <span class="proj-tag">Power BI</span>
+              <span class="proj-tag">Research &amp; Analysis</span>
+            </div>
+          </div>
+
+        </div><!-- /projects -->
+
+      </div><!-- /col-right -->
+    </div><!-- /resume-body -->
+  </div><!-- /resume -->
+
+</div><!-- /page-wrapper -->
+</body>
+</html>
