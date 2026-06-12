@@ -446,6 +446,19 @@
       border: 1px solid #ddd6fe;
     }
 
+    /* ── Internship Live Projects ── */
+    .intern-proj-heading { margin: 14px 0 8px; }
+    .intern-proj-label { font-size: 10.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #475569; }
+
+    .intern-proj-list { display: flex; flex-direction: column; gap: 10px; }
+    .intern-proj-item { padding: 10px 12px; background: #f8fafc; border-left: 3px solid #00d4ff; border-radius: 0 6px 6px 0; }
+    .intern-proj-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px; gap: 8px; }
+    .intern-proj-name { font-size: 12px; font-weight: 700; color: #1e293b; }
+    .intern-proj-type { font-weight: 500; color: #475569; }
+    .intern-proj-link { font-size: 10.5px; font-weight: 600; color: #0891b2; text-decoration: none; white-space: nowrap; padding: 2px 7px; background: #e0f2fe; border-radius: 4px; border: 1px solid #bae6fd; }
+    .intern-proj-link:hover { background: #0891b2; color: #fff; }
+    .intern-proj-desc { font-size: 11.5px; color: #374151; line-height: 1.5; margin-bottom: 6px; }
+
     /* ── Print styles ── */
     @media print {
       .screen-bar, .btn-print { display: none !important; }
@@ -729,6 +742,42 @@
               <span class="exp-tag">Data Processing</span>
               <span class="exp-tag">REST APIs</span>
             </div>
+          </div>
+
+          <!-- Internship Live Projects -->
+          <div class="intern-proj-heading">
+            <span class="intern-proj-label">🚀 Live Projects Delivered During Internship</span>
+          </div>
+          <div class="intern-proj-list">
+
+            <div class="intern-proj-item">
+              <div class="intern-proj-row">
+                <div class="intern-proj-name">PropManage <span class="intern-proj-type">— Premium Real Estate Platform</span></div>
+                <a href="https://pma-user.vercel.app" target="_blank" class="intern-proj-link">Live Demo ↗</a>
+              </div>
+              <p class="intern-proj-desc">A full-featured property management web application enabling seamless listing, browsing, and management of real estate properties. Developed and deployed to production as a key internship deliverable at Schrander Solutions.</p>
+              <div class="exp-tech-bar">
+                <span class="exp-tag">React.js</span>
+                <span class="exp-tag">JavaScript</span>
+                <span class="exp-tag">CSS3</span>
+                <span class="exp-tag">Vercel</span>
+              </div>
+            </div>
+
+            <div class="intern-proj-item">
+              <div class="intern-proj-row">
+                <div class="intern-proj-name">Advocate Chauhan <span class="intern-proj-type">— Expert Legal Services Website</span></div>
+                <a href="https://ashritha-d.github.io/ChauhanAdvocate/" target="_blank" class="intern-proj-link">Live Demo ↗</a>
+              </div>
+              <p class="intern-proj-desc">A professional legal services website for Advocate Chauhan, showcasing practice areas, legal expertise, and client consultation facilities. Built with responsive design and deployed on GitHub Pages.</p>
+              <div class="exp-tech-bar">
+                <span class="exp-tag">HTML5</span>
+                <span class="exp-tag">CSS3</span>
+                <span class="exp-tag">JavaScript</span>
+                <span class="exp-tag">GitHub Pages</span>
+              </div>
+            </div>
+
           </div>
         </div>
 
