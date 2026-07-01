@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ashritha Duppati — ATS Resume | Full Stack Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Arial:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    /* ── Reset ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #e8e8e8;
+      color: #000;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    .screen-bar {
+      background: #111;
+      padding: 12px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .screen-bar-title { color: #fff; font-size: 0.9rem; font-weight: 700; }
+    .screen-bar-title span { font-weight: 800; }
+    .screen-bar-links { display: flex; align-items: center; gap: 16px; }
+    .screen-bar-links a { color: #aaa; font-size: 0.8rem; text-decoration: none; }
+    .screen-bar-links a:hover { color: #fff; }
+    .btn-print {
+      padding: 8px 20px; background: #fff; color: #111; border: none; border-radius: 8px;
+      font-size: 0.85rem; font-weight: 700; cursor: pointer;
+    }
+    .btn-print:hover { opacity: 0.75; }
+
+    .page-wrapper { display: flex; justify-content: center; padding: 32px 16px 64px; }
+
+    .resume {
+      width: 210mm;
+      min-height: 297mm;
+      background: #fff;
+      box-shadow: 0 4px 40px rgba(0,0,0,0.18);
+      padding: 34px 42px;
+    }
+
+    /* ── Header ── */
+    .r-name { font-size: 24px; font-weight: 700; margin-bottom: 3px; }
+    .r-title { font-size: 13px; font-weight: 700; margin-bottom: 6px; }
+    .r-contact { font-size: 11.5px; color: #222; margin-bottom: 14px; }
+    .r-contact a { color: #222; text-decoration: none; }
+
+    /* ── Sections ── */
+    .r-section { margin-bottom: 16px; }
+    .r-section-title {
+      font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;
+      border-bottom: 1.5px solid #000; padding-bottom: 3px; margin-bottom: 8px;
+    }
+
+    .r-summary { font-size: 12px; margin-bottom: 6px; }
+    .r-core-skills { font-size: 12px; }
+
+    .r-job-row { display: flex; justify-content: space-between; font-size: 12.5px; font-weight: 700; }
+    .r-job-company { font-size: 12px; font-weight: 700; margin-bottom: 4px; }
+
+    ul.r-list { list-style: disc; padding-left: 18px; margin-bottom: 6px; }
+    ul.r-list li { font-size: 12px; margin-bottom: 2px; }
+
+    .r-tech-line { font-size: 11px; color: #333; margin-bottom: 10px; }
+
+    .r-proj-row { display: flex; justify-content: space-between; font-size: 12.5px; font-weight: 700; margin-top: 6px; }
+    .r-proj-sub { font-size: 11.5px; font-weight: 400; color: #333; }
+
+    .r-edu-row { display: flex; justify-content: space-between; font-size: 12px; margin-bottom: 6px; }
+    .r-edu-degree { font-weight: 700; }
+    .r-edu-school { font-size: 11.5px; color: #333; }
+
+    .r-cert-line { font-size: 12px; margin-bottom: 3px; }
+
+    @media print {
+      .screen-bar { display: none !important; }
+      body { background: #fff; }
+      .page-wrapper { padding: 0; }
+      .resume { box-shadow: none; width: 100%; min-height: auto; }
+      @page { size: A4; margin: 14mm; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="screen-bar">
+  <div class="screen-bar-title">Ashritha Duppati — <span>ATS-Safe Master Resume</span></div>
+  <div class="screen-bar-links">
+    <a href="resume.html">View Styled Portfolio Resume</a>
+    <button class="btn-print" onclick="window.print()">Download PDF</button>
+  </div>
+</div>
+
+<div class="page-wrapper">
+  <div class="resume">
+
+    <div class="r-name">Ashritha Duppati</div>
+    <div class="r-title">Full Stack Developer — Open to Full-Time, Internship &amp; Entry-Level SE Roles</div>
+    <div class="r-contact">
+      +91 8523035920 | <a href="mailto:ashrithaduppati2@gmail.com">ashrithaduppati2@gmail.com</a> |
+      <a href="https://linkedin.com/in/ashritha-duppati" target="_blank">linkedin.com/in/ashritha-duppati</a> |
+      <a href="https://github.com/ashritha-duppati" target="_blank">github.com/ashritha-duppati</a> |
+      Hyderabad, India
+    </div>
+
+    <div class="r-section">
+      <div class="r-section-title">Professional Summary</div>
+      <p class="r-summary">Full Stack Developer with hands-on experience shipping three production web applications (React.js, JavaScript, HTML5/CSS3) and backend/data engineering experience building Python and SQL pipelines during a software engineering internship. Comfortable across the stack, from responsive React interfaces to SQL-driven backend logic, with working knowledge of Git, MySQL, and cloud/hosting platforms (AWS, Azure, Vercel). Pursuing an M.Tech in Data Science. Seeking a full-time Full Stack Developer role, open to internships and entry-level Software Engineer positions.</p>
+    </div>
+
+    <div class="r-section">
+      <div class="r-section-title">Core Skills</div>
+      <p class="r-core-skills">
+        Frontend: React.js, JavaScript, HTML5, CSS3, Bootstrap, Tailwind CSS, Responsive Design<br />
+        Backend &amp; Data: Python, Java, SQL, REST APIs, ETL, Data Processing<br />
+        Databases: MySQL, SQL Querying<br />
+        Cloud / DevOps: Git, GitHub, Vercel, AWS, Azure, VS Code<br />
+        Data / ML: Machine Learning, Pandas, NumPy, Scikit-learn, Power BI
+      </p>
+    </div>
+
+    <div class="r-section">
+      <div class="r-section-title">Experience</div>
+      <div class="r-job-row"><span>Software Engineer Intern — Schrander Solutions, Hyderabad, India</span><span>Sep 2025 – Feb 2026</span></div>
+      <ul class="r-list">
+        <li>Optimized Python and SQL ETL scripts for backend data processing pipelines, improving data transformation and loading efficiency across production workflows.</li>
+        <li>Designed and tuned complex SQL queries across relational databases, improving data retrieval speed for reporting and data-driven decision-making.</li>
+        <li>Owned the end-to-end data lifecycle — ingestion, preprocessing, transformation, and structured storage — for datasets powering application features.</li>
+        <li>Debugged cross-team performance issues with development teams, identifying root causes and improving application stability.</li>
+        <li>Built backend service components following RESTful API conventions, contributing to scalable server-side architecture.</li>
+      </ul>
+      <div class="r-tech-line">Python, SQL, MySQL, Backend Development, Data Processing, REST APIs</div>
+    </div>
+
+    <div class="r-section">
+      <div class="r-section-title">Live Projects</div>
+
+      <div class="r-proj-row"><span>PropManage — Real Estate Platform <span class="r-proj-sub">(React.js, JavaScript, CSS3, Vercel)</span></span></div>
+      <ul class="r-list">
+        <li>Shipped a full-featured property listing and management web application to production as a key internship deliverable.</li>
+      </ul>
+
+      <div class="r-proj-row"><span>Advocate Chauhan — Legal Services Website <span class="r-proj-sub">(HTML5, CSS3, JavaScript, GitHub Pages)</span></span></div>
+      <ul class="r-list">
+        <li>Built and deployed a responsive legal services website with practice-area and client consultation pages.</li>
+      </ul>
+
+      <div class="r-proj-row"><span>JK Cloud Technologies — Business Website <span class="r-proj-sub">(React.js, Tailwind CSS, JavaScript, Vercel)</span></span></div>
+      <ul class="r-list">
+        <li>Delivered a responsive React business website showcasing web and cloud service offerings.</li>
+      </ul>
+    </div>
+
+    <div class="r-section">
+      <div class="r-section-title">Other Projects</div>
+
+      <div class="r-proj-row"><span>Phishing Website Detection Using Machine Learning <span class="r-proj-sub">(Python, Pandas, NumPy, Scikit-learn, MySQL, Power BI)</span></span></div>
+      <ul class="r-list">
+        <li>Built and benchmarked Random Forest, SVM, and Decision Tree classifiers on URL and HTML features to detect phishing websites, achieving high classification accuracy with reduced false positives.</li>
+      </ul>
+
+      <div class="r-proj-row"><span>Route Hijacking Detection in Opportunistic Mobile Networks <span class="r-proj-sub">(Java, MySQL, Power BI)</span></span></div>
+      <ul class="r-list">
+        <li>Designed and implemented Java-based routing-anomaly detection algorithms to identify malicious node behavior in delay-tolerant mobile networks.</li>
+      </ul>
+    </div>
+
+    <div class="r-section">
+      <div class="r-section-title">Education</div>
+      <div class="r-edu-row"><span class="r-edu-degree">M.Tech, Data Science — BVRIT Hyderabad College of Engineering for Women</span><span>Oct 2024 – Oct 2026</span></div>
+      <div class="r-edu-row"><span class="r-edu-degree">B.Tech, Computer Science &amp; Engineering — Anu Bose Institute of Technology</span><span>Jun 2020 – Jul 2024, GPA: 7.95</span></div>
+      <div class="r-edu-row"><span class="r-edu-degree">Intermediate (MPC) — TS Model School</span><span>95%</span></div>
+    </div>
+
+    <div class="r-section">
+      <div class="r-section-title">Certifications &amp; Simulations</div>
+      <div class="r-cert-line">Full Stack Web Development Bootcamp — Online Certification</div>
+      <div class="r-cert-line">Responsive Web Design Certification — freeCodeCamp</div>
+      <div class="r-cert-line">AWS Cloud Computing Workshop — Amazon Web Services</div>
+      <div class="r-cert-line">Data Analytics &amp; Forensic Technology Job Simulation — Deloitte</div>
+      <div class="r-cert-line">AI-Powered Data Analytics &amp; Strategy Development — Tata iQ</div>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>

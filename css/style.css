@@ -797,7 +797,7 @@ body.menu-open { overflow: hidden; }
 .footer-col a:hover { color: #60a5fa; padding-left: 3px; }
 .footer-bottom { border-top: 1px solid rgba(255,255,255,0.06); padding: 22px 0; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 14px; }
 .footer-bottom p { font-size: 0.8rem; color: #475569; }
-.footer-links { display: flex; gap: 20px; }
+.footer-links { display: flex; gap: 12px 20px; flex-wrap: wrap; }
 .footer-links a { font-size: 0.8rem; color: #475569; text-decoration: none; transition: var(--transition); }
 .footer-links a:hover { color: #60a5fa; }
 
