@@ -162,6 +162,8 @@ body.menu-open { overflow: hidden; }
 }
 
 .section-subtitle { color: var(--text-2); font-size: 1.05rem; max-width: 580px; margin: 0 auto; }
+.inline-link { color: var(--blue); font-weight: 600; text-decoration: none; }
+.inline-link:hover { text-decoration: underline; }
 
 /* ─── Buttons ────────────────────────────────────────────────── */
 .btn {
@@ -297,6 +299,10 @@ body.menu-open { overflow: hidden; }
   background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.25);
   font-size: 0.78rem; font-weight: 500; color: #93c5fd; margin-bottom: 22px;
 }
+.hero-badge.open-to-work {
+  background: rgba(34,197,94,0.12); border: 1.5px solid rgba(34,197,94,0.4);
+  color: #4ade80; font-weight: 700;
+}
 .badge-dot { width: 7px; height: 7px; border-radius: 50%; background: #22c55e; animation: pulse 2s infinite; }
 @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
 
@@ -419,6 +425,15 @@ body.menu-open { overflow: hidden; }
 }
 .role-card:hover { border-color: var(--blue); color: var(--blue); background: var(--blue-dim); transform: translateY(-2px); }
 .role-card i { color: var(--blue); font-size: 0.9rem; }
+
+.availability-strip { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+.availability-item {
+  display: flex; align-items: center; gap: 8px; padding: 8px 14px;
+  background: rgba(34,197,94,0.08); border: 1.5px solid rgba(34,197,94,0.3);
+  border-radius: 100px; font-size: 0.8rem; font-weight: 600; color: #16a34a;
+}
+.availability-item i { font-size: 0.8rem; }
+[data-theme="dark"] .availability-item { background: rgba(34,197,94,0.12); color: #4ade80; }
 
 /* ─── About ──────────────────────────────────────────────────── */
 .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: start; margin-bottom: 72px; }
@@ -613,7 +628,8 @@ body.menu-open { overflow: hidden; }
 .internship-projects-title { font-size: 0.88rem; font-weight: 700; color: var(--text-2); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
 .internship-projects-title i { color: var(--blue); }
 
-.internship-proj-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.internship-proj-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+@media (max-width: 1000px) { .internship-proj-grid { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 700px) { .internship-proj-grid { grid-template-columns: 1fr; } }
 
 .internship-proj-card { padding: 22px; background: var(--surface); border: 1.5px solid var(--border); border-radius: 14px; transition: var(--transition); }
@@ -622,6 +638,7 @@ body.menu-open { overflow: hidden; }
 .internship-proj-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 14px; }
 .internship-proj-icon { width: 44px; height: 44px; border-radius: 10px; background: var(--blue-dim); display: flex; align-items: center; justify-content: center; color: var(--blue); font-size: 1.2rem; flex-shrink: 0; }
 .internship-proj-icon.legal { background: rgba(124,58,237,0.1); color: #7c3aed; }
+.internship-proj-icon.cloud { background: rgba(6,182,212,0.1); color: #06b6d4; }
 
 .internship-link { display: inline-flex; align-items: center; gap: 5px; font-size: 0.73rem; font-weight: 600; color: var(--blue); background: var(--blue-dim); border: 1px solid rgba(37,99,235,0.2); border-radius: 20px; padding: 4px 11px; text-decoration: none; transition: var(--transition); white-space: nowrap; }
 .internship-link:hover { background: var(--blue); color: #fff; }
@@ -715,6 +732,15 @@ body.menu-open { overflow: hidden; }
 @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
 
 /* ─── Contact ────────────────────────────────────────────────── */
+.contact-cta {
+  display: flex; align-items: center; gap: 14px; justify-content: center; text-align: center;
+  max-width: 760px; margin: 0 auto 48px; padding: 20px 28px;
+  background: var(--blue-dim); border: 1.5px solid rgba(37,99,235,0.25); border-radius: 16px;
+}
+.contact-cta i { font-size: 1.4rem; color: var(--blue); flex-shrink: 0; }
+.contact-cta p { font-size: 0.98rem; color: var(--text); line-height: 1.6; }
+@media (max-width: 600px) { .contact-cta { flex-direction: column; gap: 10px; } }
+
 .contact-grid { display: grid; grid-template-columns: 1fr 1.3fr; gap: 72px; align-items: start; }
 @media (max-width: 860px) { .contact-grid { grid-template-columns: 1fr; gap: 40px; } }
 .contact-info h3 { font-family: var(--font-heading); font-size: 1.4rem; font-weight: 700; margin-bottom: 14px; }

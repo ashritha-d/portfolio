@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ashritha Duppati — Resume | AI & Data Science Engineer</title>
+  <title>Ashritha Duppati — Resume | Full Stack Developer | Open to Work</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
@@ -100,13 +100,53 @@
       margin-bottom: 4px;
     }
 
+    .header-title-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+
     .header-title {
       font-size: 13px;
       font-weight: 700;
       color: #ccc;
       letter-spacing: 0.06em;
       text-transform: uppercase;
+    }
+
+    .open-to-work-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 3px 10px;
+      background: #22c55e;
+      color: #fff;
+      font-size: 10px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      border-radius: 20px;
+    }
+    .open-to-work-badge::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #fff;
+    }
+
+    .header-availability {
+      font-size: 11px;
+      color: #d1fae5;
+      background: rgba(34,197,94,0.18);
+      border: 1px solid rgba(34,197,94,0.45);
+      border-radius: 6px;
+      padding: 5px 10px;
+      display: inline-block;
       margin-bottom: 16px;
+      font-weight: 600;
     }
 
     .header-contact {
@@ -487,7 +527,11 @@
     <!-- Header -->
     <div class="resume-header">
       <div class="header-name">Ashritha Duppati</div>
-      <div class="header-title">AI & Data Science Engineer &nbsp;|&nbsp; Full Stack Developer &nbsp;|&nbsp; ML Engineer</div>
+      <div class="header-title-row">
+        <div class="header-title">Full Stack Developer</div>
+        <span class="open-to-work-badge">Open to Work</span>
+      </div>
+      <div class="header-availability">Seeking Full-Time Full Stack Developer Roles · Open to Internships &amp; Entry-Level SE Positions · Available Immediately</div>
       <div class="header-contact">
         <div class="contact-item">
           <span class="icon">📞</span>
@@ -563,32 +607,22 @@
           <div class="section-title"><span class="dot"></span> Technical Skills</div>
 
           <div class="skill-group">
-            <div class="skill-group-label">Programming Languages</div>
-            <div class="skill-tags">
-              <span class="skill-tag">Python</span>
-              <span class="skill-tag">Java</span>
-              <span class="skill-tag">SQL</span>
-              <span class="skill-tag">JavaScript</span>
-            </div>
-          </div>
-
-          <div class="skill-group">
-            <div class="skill-group-label">AI / Machine Learning</div>
-            <div class="skill-tags">
-              <span class="skill-tag ai">Machine Learning</span>
-              <span class="skill-tag ai">Data Preprocessing</span>
-              <span class="skill-tag ai">Pandas</span>
-              <span class="skill-tag ai">NumPy</span>
-            </div>
-          </div>
-
-          <div class="skill-group">
             <div class="skill-group-label">Frontend Development</div>
             <div class="skill-tags">
               <span class="skill-tag">React.js</span>
               <span class="skill-tag">HTML5</span>
               <span class="skill-tag">CSS3</span>
               <span class="skill-tag">Bootstrap</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <div class="skill-group-label">Programming Languages</div>
+            <div class="skill-tags">
+              <span class="skill-tag">JavaScript</span>
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">Java</span>
+              <span class="skill-tag">SQL</span>
             </div>
           </div>
 
@@ -601,22 +635,23 @@
           </div>
 
           <div class="skill-group">
-            <div class="skill-group-label">Data Analytics & Visualization</div>
+            <div class="skill-group-label">Cloud & DevOps Tools</div>
             <div class="skill-tags">
-              <span class="skill-tag ai">Power BI</span>
-              <span class="skill-tag ai">Data Analysis</span>
+              <span class="skill-tag cloud">Git</span>
+              <span class="skill-tag cloud">GitHub</span>
+              <span class="skill-tag cloud">Vercel</span>
+              <span class="skill-tag cloud">AWS</span>
+              <span class="skill-tag cloud">Azure</span>
+              <span class="skill-tag tool">VS Code</span>
             </div>
           </div>
 
           <div class="skill-group">
-            <div class="skill-group-label">Cloud & DevOps Tools</div>
+            <div class="skill-group-label">Additional: Data & ML</div>
             <div class="skill-tags">
-              <span class="skill-tag cloud">AWS</span>
-              <span class="skill-tag cloud">Azure</span>
-              <span class="skill-tag cloud">Git</span>
-              <span class="skill-tag cloud">GitHub</span>
-              <span class="skill-tag tool">VS Code</span>
-              <span class="skill-tag tool">MS Office</span>
+              <span class="skill-tag ai">Machine Learning</span>
+              <span class="skill-tag ai">Pandas &amp; NumPy</span>
+              <span class="skill-tag ai">Power BI</span>
             </div>
           </div>
         </div>
@@ -624,6 +659,22 @@
         <!-- Certifications -->
         <div class="section">
           <div class="section-title"><span class="dot"></span> Certifications</div>
+
+          <div class="cert-item">
+            <div class="cert-bullet"></div>
+            <div>
+              <div class="cert-text">Full Stack Web Development Bootcamp</div>
+              <span class="cert-org">Online Certification</span>
+            </div>
+          </div>
+
+          <div class="cert-item">
+            <div class="cert-bullet"></div>
+            <div>
+              <div class="cert-text">Responsive Web Design Certification</div>
+              <span class="cert-org">freeCodeCamp</span>
+            </div>
+          </div>
 
           <div class="cert-item">
             <div class="cert-bullet"></div>
@@ -648,22 +699,6 @@
               <span class="cert-org">Tata iQ — Financial Services</span>
             </div>
           </div>
-
-          <div class="cert-item">
-            <div class="cert-bullet"></div>
-            <div>
-              <div class="cert-text">Responsive Web Design Certification</div>
-              <span class="cert-org">freeCodeCamp</span>
-            </div>
-          </div>
-
-          <div class="cert-item">
-            <div class="cert-bullet"></div>
-            <div>
-              <div class="cert-text">Full Stack Web Development Bootcamp</div>
-              <span class="cert-org">Online Certification</span>
-            </div>
-          </div>
         </div>
 
         <!-- Achievements -->
@@ -673,7 +708,6 @@
           <div class="achieve-item">Participated in <strong>AWS Cloud Computing Workshop</strong>, gaining hands-on experience with cloud services and architecture</div>
           <div class="achieve-item">Completed <strong>Deloitte Job Simulation</strong> in data analysis and forensic technology with distinction</div>
           <div class="achieve-item">Completed <strong>Tata iQ Job Simulation</strong> involving AI-powered data analytics and financial strategy development</div>
-          <div class="achieve-item">Secured <strong>95% in Intermediate (MPC)</strong> — among top performers at TS Model School</div>
         </div>
 
       </div><!-- /col-left -->
@@ -685,7 +719,7 @@
         <div class="section">
           <div class="section-title"><span class="dot"></span> Professional Summary</div>
           <p class="summary-text">
-            Motivated <strong>M.Tech Data Science</strong> student with hands-on software engineering experience and a strong foundation in <strong>Python, Java, SQL, Machine Learning,</strong> and <strong>full-stack web development</strong>. Demonstrated ability to build end-to-end ML solutions for real-world cybersecurity challenges, leveraging data preprocessing, feature engineering, and predictive modeling. Experienced with cloud platforms (<strong>AWS, Azure</strong>), relational databases, and frontend frameworks including <strong>React.js</strong>. Adept at translating complex datasets into actionable insights through <strong>data analytics and visualization</strong>. Seeking to apply technical skills and academic excellence in roles spanning <strong>AI Engineering, Data Science, Data Analytics,</strong> and <strong>Full Stack Development</strong>.
+            Motivated <strong>Full Stack Developer</strong> with hands-on software engineering experience and a strong foundation in <strong>frontend development (React.js, HTML5, CSS3), backend logic, databases, and REST APIs</strong>. Demonstrated ability to build and ship end-to-end web applications — including three live production projects covering UI development, data-driven backends, and deployment. Experienced with <strong>Git version control, MySQL database design,</strong> and cloud/hosting platforms including <strong>AWS, Azure, and Vercel</strong>. Comfortable working across the full stack, from responsive interfaces to server-side logic and data persistence. Actively seeking a <strong>Full-Time Full Stack Developer</strong> role — also open to internships and entry-level Software Engineer positions — where I can contribute, learn, and grow within a professional development team.
           </p>
         </div>
 
@@ -760,6 +794,20 @@
               </div>
             </div>
 
+            <div class="intern-proj-item">
+              <div class="intern-proj-row">
+                <div class="intern-proj-name">JK Cloud Technologies <span class="intern-proj-type">— Premium Web & Cloud Solutions</span></div>
+                <a href="https://j-kcloud-technologies.vercel.app/" target="_blank" class="intern-proj-link">Live Demo ↗</a>
+              </div>
+              <p class="intern-proj-desc">A modern business website for JK Cloud Technologies showcasing premium web development and cloud solutions, built with a fast, responsive React interface and deployed to production.</p>
+              <div class="exp-tech-bar">
+                <span class="exp-tag">React.js</span>
+                <span class="exp-tag">Tailwind CSS</span>
+                <span class="exp-tag">JavaScript</span>
+                <span class="exp-tag">Vercel</span>
+              </div>
+            </div>
+
           </div>
         </div>
 
@@ -792,13 +840,11 @@
             </ul>
             <div class="project-tech-bar">
               <span class="proj-tag">Python</span>
-              <span class="proj-tag">Scikit-learn</span>
               <span class="proj-tag">Pandas</span>
               <span class="proj-tag">NumPy</span>
               <span class="proj-tag">MySQL</span>
               <span class="proj-tag">Power BI</span>
               <span class="proj-tag">Machine Learning</span>
-              <span class="proj-tag">Feature Engineering</span>
             </div>
           </div>
 
