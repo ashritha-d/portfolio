@@ -5,19 +5,10 @@
 
 'use strict';
 
-/* ─── Loader ────────────────────────────────────────────────── */
-window.addEventListener('load', () => {
-  setTimeout(() => {
-    const loader = document.getElementById('loader');
-    if (loader) loader.classList.add('hidden');
-    document.body.style.overflow = '';
-    // Trigger hero animations
-    document.querySelectorAll('.hero .fade-up').forEach((el, i) => {
-      setTimeout(() => el.classList.add('visible'), i * 120);
-    });
-  }, 2200);
+/* ─── Hero entrance animation ──────────────────────────────── */
+document.querySelectorAll('.hero .fade-up').forEach((el, i) => {
+  setTimeout(() => el.classList.add('visible'), i * 120);
 });
-document.body.style.overflow = 'hidden';
 
 /* ─── Custom Cursor ─────────────────────────────────────────── */
 const cursorDot  = document.getElementById('cursorDot');
@@ -120,8 +111,8 @@ class Particle {
     this.vx    = (Math.random() - 0.5) * 0.4;
     this.vy    = (Math.random() - 0.5) * 0.4;
     this.size  = Math.random() * 2 + 0.5;
-    this.alpha = Math.random() * 0.5 + 0.1;
-    this.color = Math.random() > 0.5 ? '0, 212, 255' : '124, 58, 237';
+    this.alpha = Math.random() * 0.25 + 0.05;
+    this.color = Math.random() > 0.5 ? '37, 99, 235' : '124, 58, 237';
   }
 
   update() {
@@ -147,11 +138,11 @@ function drawConnections() {
       const dy   = particles[i].y - particles[j].y;
       const dist = Math.sqrt(dx * dx + dy * dy);
       if (dist < 130) {
-        const alpha = (1 - dist / 130) * 0.12;
+        const alpha = (1 - dist / 130) * 0.06;
         ctx.beginPath();
         ctx.moveTo(particles[i].x, particles[i].y);
         ctx.lineTo(particles[j].x, particles[j].y);
-        ctx.strokeStyle = `rgba(0, 212, 255, ${alpha})`;
+        ctx.strokeStyle = `rgba(37, 99, 235, ${alpha})`;
         ctx.lineWidth   = 0.6;
         ctx.stroke();
       }

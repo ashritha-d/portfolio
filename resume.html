@@ -82,9 +82,9 @@
 
     /* ── Header ── */
     .resume-header {
-      background: #111;
+      background: #fff;
       padding: 32px 36px 28px;
-      color: #fff;
+      color: #111;
       position: relative;
       overflow: hidden;
       border-bottom: 4px solid #000;
@@ -98,11 +98,13 @@
       font-weight: 800;
       letter-spacing: -0.5px;
       margin-bottom: 4px;
+      text-align: center;
     }
 
     .header-title-row {
       display: flex;
       align-items: center;
+      justify-content: center;
       gap: 10px;
       flex-wrap: wrap;
       margin-bottom: 10px;
@@ -111,7 +113,7 @@
     .header-title {
       font-size: 13px;
       font-weight: 700;
-      color: #ccc;
+      color: #444;
       letter-spacing: 0.06em;
       text-transform: uppercase;
     }
@@ -137,21 +139,10 @@
       background: #fff;
     }
 
-    .header-availability {
-      font-size: 11px;
-      color: #d1fae5;
-      background: rgba(34,197,94,0.18);
-      border: 1px solid rgba(34,197,94,0.45);
-      border-radius: 6px;
-      padding: 5px 10px;
-      display: inline-block;
-      margin-bottom: 16px;
-      font-weight: 600;
-    }
-
     .header-contact {
       display: flex;
       flex-wrap: wrap;
+      justify-content: center;
       gap: 6px 20px;
     }
 
@@ -160,13 +151,13 @@
       align-items: center;
       gap: 5px;
       font-size: 12.5px;
-      color: #bbb;
+      color: #444;
     }
 
-    .contact-item .icon { color: #bbb; font-size: 11px; }
+    .contact-item .icon { color: #444; font-size: 11px; }
 
-    .contact-item a { color: #bbb; text-decoration: none; }
-    .contact-item a:hover { color: #fff; }
+    .contact-item a { color: #444; text-decoration: none; }
+    .contact-item a:hover { color: #000; }
 
     /* ── Layout ── */
     .resume-body {
@@ -285,9 +276,6 @@
     }
 
     .cert-bullet {
-      width: 16px; height: 16px;
-      background: #111;
-      border-radius: 4px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -297,8 +285,8 @@
 
     .cert-bullet::after {
       content: '✓';
-      color: #fff;
-      font-size: 9px;
+      color: #000;
+      font-size: 12px;
       font-weight: 700;
     }
 
@@ -316,7 +304,7 @@
     }
 
     .achieve-item::before {
-      content: '▸';
+      content: '✓';
       color: #000;
       flex-shrink: 0;
       margin-top: 1px;
@@ -331,16 +319,6 @@
     }
 
     .summary-text strong { color: #000; font-weight: 700; }
-
-    .core-skills-line {
-      font-size: 11.5px;
-      color: #222;
-      line-height: 1.6;
-      margin-top: 8px;
-      padding-top: 8px;
-      border-top: 1px solid #ddd;
-    }
-    .core-skills-line strong { color: #000; }
 
     /* ── Experience ── */
     .exp-item { margin-bottom: 18px; }
@@ -542,7 +520,6 @@
         <div class="header-title">Full Stack Developer</div>
         <span class="open-to-work-badge">Open to Work</span>
       </div>
-      <div class="header-availability">Seeking Full-Time Full Stack Developer Roles · Open to Internships &amp; Entry-Level SE Positions · Available Immediately</div>
       <div class="header-contact">
         <div class="contact-item">
           <span class="icon">📞</span>
@@ -554,11 +531,11 @@
         </div>
         <div class="contact-item">
           <span class="icon">🔗</span>
-          <a href="https://linkedin.com" target="_blank">linkedin.com/in/ashritha-duppati</a>
+          <a href="https://www.linkedin.com/in/ashritha-duppati-47ab68271/" target="_blank">linkedin.com/in/ashritha-duppati</a>
         </div>
         <div class="contact-item">
           <span class="icon">💻</span>
-          <a href="https://github.com" target="_blank">github.com/ashritha-duppati</a>
+          <a href="https://github.com/ashritha-d" target="_blank">github.com/ashritha-d</a>
         </div>
         <div class="contact-item">
           <span class="icon">📍</span>
@@ -712,6 +689,16 @@
           </div>
         </div>
 
+        <!-- Strengths -->
+        <div class="section">
+          <div class="section-title"><span class="dot"></span> Strengths</div>
+          <div class="achieve-item">Problem-Solving &amp; Analytical Thinking</div>
+          <div class="achieve-item">Passion for Technology</div>
+          <div class="achieve-item">Debugging &amp; Troubleshooting</div>
+          <div class="achieve-item">Team Collaboration &amp; Effective Communication</div>
+          <div class="achieve-item">Continuous Learning &amp; Growth Mindset</div>
+        </div>
+
       </div><!-- /col-left -->
 
       <!-- Right Column -->
@@ -723,7 +710,6 @@
           <p class="summary-text">
             <strong>Full Stack Developer</strong> with hands-on experience shipping three production web applications (<strong>React.js, JavaScript, HTML5/CSS3</strong>) and backend/data engineering experience building <strong>Python and SQL pipelines</strong> during a software engineering internship. Comfortable across the stack — from responsive React interfaces to SQL-driven backend logic — with working knowledge of <strong>Git, MySQL,</strong> and cloud/hosting platforms (<strong>AWS, Azure, Vercel</strong>). Currently pursuing an M.Tech in Data Science, bringing a stronger-than-average grasp of data-driven system design. Seeking a <strong>full-time Full Stack Developer</strong> role, open to internships and entry-level Software Engineer positions, where I can contribute, learn, and grow within a professional development team.
           </p>
-          <div class="core-skills-line"><strong>Core Skills:</strong> React.js, JavaScript, HTML5/CSS3, Responsive Design, Python, Java, SQL, MySQL, REST APIs, Git/GitHub, AWS, Azure, Vercel</div>
         </div>
 
         <!-- Experience -->
