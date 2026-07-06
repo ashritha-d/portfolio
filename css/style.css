@@ -595,6 +595,13 @@ body.menu-open { overflow: hidden; }
 .exp-role { font-size: 1.02rem; font-weight: 700; font-family: var(--font-heading); margin-bottom: 5px; }
 .exp-company { font-size: 0.84rem; color: var(--blue); font-weight: 600; display: flex; align-items: center; gap: 6px; }
 .exp-badge { padding: 3px 11px; background: var(--blue-dim); border: 1px solid rgba(37,99,235,0.2); border-radius: 100px; color: var(--blue); font-size: 0.7rem; font-weight: 600; white-space: nowrap; }
+.exp-header-actions { display: flex; flex-direction: column; align-items: flex-end; gap: 8px; }
+.exp-cert-link {
+  display: inline-flex; align-items: center; gap: 5px; font-size: 0.75rem; font-weight: 600;
+  color: var(--blue); background: var(--blue-dim); border: 1px solid rgba(37,99,235,0.2);
+  border-radius: 100px; padding: 4px 11px; text-decoration: none; white-space: nowrap; transition: var(--transition);
+}
+.exp-cert-link:hover { background: var(--blue); color: #fff; }
 
 .exp-achievements { list-style: none; margin-bottom: 14px; }
 .exp-achievements li { font-size: 0.83rem; color: var(--text-2); padding: 4px 0 4px 14px; position: relative; line-height: 1.55; }
@@ -677,11 +684,14 @@ body.menu-open { overflow: hidden; }
 .meta-logo { background: rgba(37,99,235,0.1); color: var(--blue); }
 .deeplearn-logo { background: rgba(124,58,237,0.1); color: var(--purple); }
 .docker-logo { background: rgba(37,99,235,0.1); color: var(--blue); }
+.internship-logo { background: rgba(37,99,235,0.1); color: var(--blue); }
 .cert-content h4 { font-size: 0.92rem; font-weight: 600; margin-bottom: 3px; }
 .cert-org { display: block; font-size: 0.78rem; color: var(--text-3); margin-bottom: 6px; }
 .cert-date { display: block; font-size: 0.75px; color: var(--text-3); margin-bottom: 6px; font-size: 0.75rem; }
 .cert-date i { color: var(--blue); margin-right: 4px; }
-.cert-verify { display: inline-flex; align-items: center; gap: 5px; font-size: 0.75rem; color: #22c55e; font-weight: 500; }
+.cert-verify { display: inline-flex; align-items: center; gap: 5px; font-size: 0.75rem; color: #22c55e; font-weight: 500; text-decoration: none; }
+.cert-view-link { color: var(--blue); cursor: pointer; }
+.cert-view-link:hover { text-decoration: underline; }
 
 /* ─── Achievements ───────────────────────────────────────────── */
 .achievements-section { background: var(--bg-2); }
